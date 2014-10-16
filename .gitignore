@@ -1,29 +1,46 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#include <stdio.h>
+#include <conio.h>
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+//void main()
+//{
+//	int saat,dakika,saniye,topsaniye;
+//
+//	printf("Saat, dakika ve saniyeyi giriniz..");
+//	scanf("%d%d%d",&saat,&dakika,&saniye);
+//	topsaniye = (saat*3600) + (dakika*60) + (saniye);
+//	printf ("Toplam saniye = %d", topsaniye);
+//
+//	getch();
+//
+//}
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+void main()
+{
+	int dogYil, dogAy, dogGun, yil, ay, gun, yas,aygunu,dogAyGunu, gunfarki, yasgunu;
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+	printf("Dogum gununu gun-ay-yil olarak giriniz.");
+	scanf("%d%d%d",&dogGun,&dogAy,&dogYil);
+	printf("Gunumuzu gun ay yil yolarak giriniz.");
+	scanf("%d%d%d",&gun,&ay,&yil);
+
+	yas = yil - dogYil;
+	aygunu = ((ay-1)*30) + gun;
+	dogAyGunu = ((dogAy - 1)*30) + dogGun;
+	
+	gunfarki = aygunu - dogAyGunu ;
+	
+	if (gunfarki < 0)
+	{
+		yas = yas - 1;
+		yasgunu = 365 + (gunfarki);
+		printf("%d %d",yas, yasgunu);
+	}
+	if (gunfarki >= 0)
+	{
+		printf ("%d %d", yas, gunfarki);
+
+	}
+	getch();
+
+}
