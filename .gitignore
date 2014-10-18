@@ -2,18 +2,6 @@
 #include <conio.h>
 
 
-//void main()
-//{
-//	int saat,dakika,saniye,topsaniye;
-//
-//	printf("Saat, dakika ve saniyeyi giriniz..");
-//	scanf("%d%d%d",&saat,&dakika,&saniye);
-//	topsaniye = (saat*3600) + (dakika*60) + (saniye);
-//	printf ("Toplam saniye = %d", topsaniye);
-//
-//	getch();
-//
-//}
 
 void main()
 {
